@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: eurekaclient
+  rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest  
 eureka:
   client:
     serviceUrl:
@@ -14,8 +19,3 @@ eureka:
     prefer-ip-address: true
     instance-id : ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
     env: aaaaaa
-rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
